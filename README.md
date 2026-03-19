@@ -66,12 +66,12 @@ UML_Diagram.png (or UML_Diagram.pdf)
 
 ## 🧩 Step 1 — Choose Your Dataset
 
-**Dataset Name:**  
-**Source / Link:**  
+**Dataset Name:**  pokemon.csv
+**Source / Link:**  https://runestone.academy/ns/books/published/csawesome2/external/_static/datasets/pokemon.csv
 
 **What this dataset contains (2–3 sentences):**  
-____________________________________________________________________  
-____________________________________________________________________  
+This dataset contains all original 151 pokemon, as well as information about their types, attack, defense, health, speed, sprite, and description.
+  
 
 ---
 
@@ -80,8 +80,8 @@ ____________________________________________________________________
 Your guiding question should be something you can answer using your dataset.
 
 **My guiding question:**  
-____________________________________________________________________  
-____________________________________________________________________  
+What are the most common types from the original 151 pokemon?  
+  
 
 Examples:
 
@@ -124,11 +124,19 @@ In `Main.java`, you must:
 
 ### Column → Attribute Map
 
-| Attribute Name | CSV Column Name | Column Index # | Notes |
-|----------------|------------------|----------------|-------|
-|                |                  |                |       |
-|                |                  |                |       |
-|                |                  |                |       |
+| Attribute Name | CSV Column Name | Column Index # |                  Notes                  |
+|----------------|-----------------|----------------|-----------------------------------------|
+| pokedexNumber  | Number          | 0              | Unique identifier for each Pokemon      |
+| name           | Pokemon         | 1              | The name of the Pokemon                 |
+| type1          | Type 1          | 2              | Primary type (required)                 |
+| type2          | Type 2          | 3              | Secondary type (optional, can be empty) |
+| hp             | HP              | 4              | Hit Points stat                         |
+| attack         | Attack          | 5              | Physical attack stat                    |
+| defense        | Defense         | 6              | Physical defense stat                   |
+| speed          | Speed           | 7              | Speed stat                              |
+| sprite         | PNG             | 8              | URL to Pokemon sprite image             |
+| description    | Description     | 9              | Text description of the Pokemon         |
+
 
 ---
 
@@ -145,8 +153,11 @@ You must write **at least two algorithms** to analyze your dataset.
 
 **Algorithms I will implement:**
 
-1. __________________________________________  
-2. __________________________________________  
+1. Count types - Counts occurrences of each Pokemon type (both primary and secondary)
+2. Compute average HP - Calculates the average HP stat across all Pokemon
+3. Find maximum attack - Finds the highest attack stat value
+4. Find minimum defense - Finds the lowest defense stat value
+5. Find most common type - Determines which type appears most frequently  
 
 Optional extras:  
 - Sorting  
@@ -164,14 +175,14 @@ After analyzing your objects, print:
 - ✔ Your algorithm results  
 - ✔ A clear answer to your guiding question  
 
-**My findings:**  
-____________________________________________________________________  
-____________________________________________________________________  
-____________________________________________________________________  
+**My findings:**   
+- Average HP across all Pokemon: 64.21  
+- Maximum Attack stat: 134  
+- Minimum Defense stat: 5  
+- Type distribution: Water (32), Poison (33), Grass (14), Fire (12), Flying (19), Normal (24), Electric (9), Ground (14), Psychic (14), Rock (11), Ice (5), Fighting (8), Dragon (3), Ghost (3), Bug (12)  
 
 **My answer to the guiding question:**  
-____________________________________________________________________  
-____________________________________________________________________  
+The most common type among the original 151 Pokemon is Poison, appearing 33 times. Water is the second most common with 32 occurrences, followed by Normal with 24.  
 
 ---
 
@@ -218,10 +229,8 @@ Write a short reflection (3–5 sentences):
 - How trustworthy are your insights?
 
 **My reflection:**  
-____________________________________________________________________  
-____________________________________________________________________  
-____________________________________________________________________  
-____________________________________________________________________  
+The data is the complete set of 151 pokemon with accurate stats and typing, and it comes from a trustworthy source on pokemon information. However, some descriptions may be off but that doesn't affect any 
+statistical findings. On the other hand, the data is skewed towards water and poision type pokemon with dragon being by far the rarest meaning more in depth analysis of the dataset may be misleading.
 
 ---
 
@@ -251,17 +260,17 @@ Allow the user to choose:
 
 ## ✅ Submission Checklist
 
-- [ ] Dataset selected
-- [ ] Guiding question written
-- [ ] Class created with ≥3 attributes
-- [ ] File reading implemented
-- [ ] ArrayList/array of objects created
-- [ ] At least 2 analysis algorithms implemented
-- [ ] Findings printed
-- [ ] Javadoc comments added
-- [ ] UML diagram included
-- [ ] Reflection completed
-- [ ] Code compiles & runs
+- [x] Dataset selected
+- [x] Guiding question written
+- [x] Class created with ≥3 attributes
+- [x] File reading implemented
+- [x] ArrayList/array of objects created
+- [x] At least 2 analysis algorithms implemented
+- [x] Findings printed
+- [x] Javadoc comments added
+- [x] UML diagram included
+- [x] Reflection completed
+- [x] Code compiles & runs
 
 ---
 
